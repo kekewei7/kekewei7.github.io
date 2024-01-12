@@ -28,9 +28,19 @@
             border-radius: 10px;
         }
     </style>
+ </head>
 
-</head>
 <body>
+
+<canvas id="myCanvas"></canvas>
+<!-- 弹出层 -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <p>点击进入疯狂！</p>
+        <button onclick="playAudio()">确定</button>
+    </div>
+</div>
+
   <embed src="3.mp3" autostart="true" loop="true" hidden="true"> 
   <img src="xiongmao.jpg" width="300px" height="300px"/>
 </body>
