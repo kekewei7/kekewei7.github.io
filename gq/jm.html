@@ -1,9 +1,41 @@
 <!DOCTYPE html>  
 <html>  
 <head>  
-  <title>自动播放音频</title>  
+  <title>彻底疯狂</title>  
 </head>  
 <body>  
   <embed src="1.mp3" autostart="true" loop="true" hidden="true">
+<script>
+   const width = document.getElementById("myCanvas").width = screen.availWidth;
+
+    const height = document.getElementById("myCanvas").height = screen.availHeight;
+
+    const ctx = document.getElementById("myCanvas").getContext("2d");
+
+    const arr = Array(Math.ceil(width / 10)).fill(0);
+
+    const str = "KFC V我50 疯狂 星期四 疯狂！！！ V50 肯德基".split(" ");
+
+    function rain() {
+
+        ctx.fillStyle = "rgba(0,0,0,0.05)";
+
+        ctx.fillRect(0, 0, width, height);
+
+        ctx.fillStyle = "#fff";
+        ctx.font = '20px Arial';
+        arr.forEach(function (value, index) {
+
+            ctx.fillText(str[Math.floor(Math.random() * str.length)], index * 10, 8888 * Math.random());
+
+            arr[index] = value >= height || value > 8888 * Math.random() ? 0 : value+10;
+
+        });
+
+    }
+    openModal()
+
+
+</script>
 </body>  
 </html>
